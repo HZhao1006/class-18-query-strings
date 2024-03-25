@@ -27,8 +27,10 @@
     <?php echo htmlspecialchars($grade); ?>
   </td>
   <td class="min">
-    <!-- TODO: need parameter for the record's id -->
+    <!-- need parameter for the record's id -->
     <form class="edit center-flex" method="get" action="/transcript/update">
+      <input type="hidden" name="record" value="<?php echo htmlspecialchars($record["grades.id"]);?>">
+
       <button class="center-flex" type="submit" aria-label="update <?php echo htmlspecialchars($record['courses.number']); ?> grade" title="Update <?php echo htmlspecialchars($record['courses.number']); ?> grade">
         <img src="/public/images/edit-icon.svg" alt="">
       </button>
